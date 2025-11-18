@@ -5,86 +5,205 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bias – Disability is normalized</title>
   <style>
-    body { margin:0; font-family: 'Noto Sans JP', sans-serif; background:#ffffff; color:#111; }
-    header { padding:60px 40px; border-bottom:1px solid #e5e5e5; }
-    h1 { font-size:42px; font-weight:700; margin:0; line-height:1.3; }
-    h2 { font-size:28px; font-weight:600; margin-top:60px; }
-    p { line-height:1.8; font-size:16px; }
-    section { padding:60px 40px; border-bottom:1px solid #f0f0f0; }
-    .eng { font-family:'Helvetica','Arial',sans-serif; letter-spacing:0.5px; }
-    .tagline { font-size:20px; margin-top:10px; color:#666; }
-    .line-box { margin-top:20px; padding:20px; border-left:4px solid #000; background:#fafafa; }
-    footer { padding:40px; text-align:center; font-size:14px; color:#777; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans JP",
+        system-ui, sans-serif;
+      color: #111;
+      background: #ffffff;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .page {
+      min-height: 100vh;
+      padding: 32px 20px 64px;
+    }
+    .inner {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    /* header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 56px;
+    }
+    .logo {
+      font-size: 14px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+    .logo span {
+      font-weight: 600;
+    }
+    .nav {
+      display: flex;
+      gap: 20px;
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      opacity: 0.6;
+    }
+
+    /* hero */
+    .hero {
+      margin-bottom: 72px;
+    }
+    .hero-en {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 32px;
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+    .hero-ja {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .hero-text {
+      font-size: 14px;
+      line-height: 1.9;
+      color: #444;
+      max-width: 520px;
+    }
+
+    /* section */
+    section {
+      margin-top: 56px;
+    }
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 8px;
+    }
+    .section-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .section-body {
+      font-size: 14px;
+      line-height: 1.9;
+      color: #444;
+    }
+
+    /* lines */
+    .divider {
+      height: 1px;
+      background: #eee;
+      margin: 40px 0;
+    }
+
+    /* footer */
+    footer {
+      margin-top: 72px;
+      font-size: 11px;
+      color: #999;
+      line-height: 1.8;
+    }
+
+    @media (min-width: 800px) {
+      .hero {
+        padding-right: 120px;
+      }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1 class="eng">Disability is normalized</h1>
-    <div class="tagline">特別から日常へ。</div>
-  </header>
+  <div class="page">
+    <div class="inner">
 
-  <section>
-    <h2>About Bias</h2>
-    <p>
-      Biasは、「障害を特別から日常へ戻す」ことをテーマにしたクリエイティブプロジェクトです。<br>
-      思想（BIAS CORE）、循環（RE:BIAS）、体験（GLEAM）という3つのラインを軸に、
-      デザイン・アート・ワークショップ・イベントを通して、社会の“見え方”を変えていきます。
-    </p>
-  </section>
+      <header>
+        <div class="logo">
+          <span>BIAS</span> PROJECT
+        </div>
+        <nav class="nav">
+          <span>CORE</span>
+          <span>RE:BIAS</span>
+          <span>GLEAM</span>
+        </nav>
+      </header>
 
-  <section>
-    <h2>BIAS CORE — 思想・言葉・アート</h2>
-    <div class="line-box">
-      <p>
-        心に触れる言葉、詩、ZINE、光のアートなどを通して、
-        「障害とは何か」「日常とは何か」という問いを投げかける思想ライン。<br><br>
-        ・ZINE / ARTBOOK<br>
-        ・光を用いたアート表現<br>
-        ・noteによる思想発信<br>
-      </p>
+      <main>
+        <!-- hero -->
+        <section class="hero">
+          <div class="hero-en">Disability is normalized.</div>
+          <div class="hero-ja">特別から、日常へ。</div>
+          <p class="hero-text">
+            Bias は、障害を「特別なもの」として切り離すのではなく、
+            日常の中にあるひとつの揺らぎとして捉え直すプロジェクトです。
+            思想（BIAS CORE）、循環（RE:BIAS）、体験（GLEAM）という
+            3つのラインを通して、社会の“見え方”を静かにずらしていきます。
+          </p>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- BIAS CORE -->
+        <section>
+          <div class="section-label">Bias Core</div>
+          <h2 class="section-title">思想・言葉・アート</h2>
+          <p class="section-body">
+            詩、テキスト、ZINE、光のイメージなど、
+            言葉とビジュアルで「障害とは何か」「ふつうとは何か」を問い直すラインです。
+            noteでの文章発信や、小さな冊子・アートワークとしてかたちにしていきます。
+          </p>
+        </section>
+
+        <!-- RE:BIAS -->
+        <section>
+          <div class="section-label">Re:bias</div>
+          <h2 class="section-title">循環・服の再生</h2>
+          <p class="section-body">
+            役目を終えた服や布を集め、解体し、別のかたちに再構成するプロジェクト。
+            「もういらないもの」を、「もう一度 日常に戻るもの」へ。
+            リメイクプロダクトや布の断片を使った作品として展開していきます。
+          </p>
+        </section>
+
+        <!-- GLEAM -->
+        <section>
+          <div class="section-label">Gleam</div>
+          <h2 class="section-title">体験・ワークショップ・イベント</h2>
+          <p class="section-body">
+            光と音、空間を使った体験型のイベントシリーズ。
+            障害のある人／ない人、福祉とカルチャー、日常と非日常が
+            ゆるやかに混ざり合う時間をデザインします。
+            ワークショップや学校・企業向けのプログラムとしても展開予定です。
+          </p>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- contact / business -->
+        <section>
+          <div class="section-label">For business / collab</div>
+          <h2 class="section-title">依頼・相談</h2>
+          <p class="section-body">
+            福祉施設・企業・学校・地域プロジェクトなどと連携し、<br>
+            ロゴ・フライヤー・映像・空間演出・ワークショップ設計などの
+            デザイン業務を行っています。<br><br>
+            ご相談は Instagram
+            DM（@us_bias）またはメールからお知らせください。
+          </p>
+        </section>
+
+        <footer>
+          Bias Project — Disability is normalized / 特別から日常へ。<br>
+          © Bias
+        </footer>
+      </main>
     </div>
-  </section>
-
-  <section>
-    <h2>RE:BIAS — 循環・服の再生</h2>
-    <div class="line-box">
-      <p>
-        古くなった服や布を回収し、再生・再構築するライン。<br>
-        「役目を終えたものを、もう一度日常へ」と再解釈する循環型プロジェクトです。<br><br>
-        ・古着回収 / リメイクプロダクト<br>
-        ・布のアートピース制作<br>
-        ・展示・販売
-      </p>
-    </div>
-  </section>
-
-  <section>
-    <h2>GLEAM — 体験・ワークショップ・イベント</h2>
-    <div class="line-box">
-      <p>
-        光・音・空間を用いた体験型イベント「Gleam」。<br>
-        参加者が“違い”を越えて混ざり合う瞬間をデザインします。<br><br>
-        ・音楽×光のイベント<br>
-        ・体験型ワークショップ（ADHD / 社会モデルなど）<br>
-        ・学校・企業・施設向けの研修プログラム
-      </p>
-    </div>
-  </section>
-
-  <section>
-    <h2>For Business — 依頼・相談</h2>
-    <p>
-      Biasでは以下の依頼を受け付けています：<br><br>
-      ・福祉・地域・企業のデザイン制作<br>
-      ・広報・ブランディング支援<br>
-      ・ワークショップ / 研修の実施<br>
-      ・イベント企画 / 空間演出<br><br>
-      お問い合わせは Instagram DM またはメールまで。
-    </p>
-  </section>
-
-  <footer>
-    © Bias Project — Disability is normalized
-  </footer>
+  </div>
 </body>
 </html>
