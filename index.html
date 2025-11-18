@@ -29,48 +29,37 @@
 
     .page {
       min-height: 100vh;
-      padding: 40px 20px 72px;
+      padding: 64px 24px 96px;
     }
 
     .inner {
-      max-width: 960px;
+      max-width: 720px;
       margin: 0 auto;
     }
 
-    /* ---------- header ---------- */
+    /* ---------- header（ロゴのみ・余白多め） ---------- */
 
     header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 72px;
+      margin-bottom: 96px;
     }
 
     .logo-wrap {
-      display: flex;
-      align-items: center;
-      gap: 14px;
+      text-align: center;
+      padding: 32px 0 24px;
     }
 
     .logo-wrap img {
-      height: 44px;
+      height: 32px;
       width: auto;
       display: block;
+      margin: 0 auto 10px;
     }
 
     .logo-sub {
-      font-size: 11px;
-      letter-spacing: 0.18em;
+      font-size: 10px;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
-    }
-
-    .nav {
-      display: flex;
-      gap: 20px;
-      font-size: 11px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      opacity: 0.75;
+      color: #777777;
     }
 
     /* ---------- hero ---------- */
@@ -81,28 +70,21 @@
 
     .hero-en {
       font-family: "Helvetica Neue", Arial, sans-serif;
-      font-size: 32px;
-      line-height: 1.3;
-      margin-bottom: 10px;
+      font-size: 26px;
+      line-height: 1.4;
+      margin-bottom: 8px;
     }
 
     .hero-ja {
-      font-size: 15px;
+      font-size: 14px;
       color: #555555;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
 
     .hero-text {
-      font-size: 14px;
+      font-size: 13px;
       line-height: 2;
-      max-width: 540px;
       color: #444444;
-    }
-
-    .divider {
-      height: 1px;
-      background: #e5e5e5;
-      margin: 72px 0;
     }
 
     /* ---------- sections ---------- */
@@ -111,29 +93,24 @@
       margin-top: 16px;
     }
 
-    .section-label {
-      font-size: 11px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: #999999;
-      margin-bottom: 10px;
-    }
-
     .section-title {
-      font-size: 22px;
+      font-size: 18px;
       font-weight: 600;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
 
     .section-body {
-      font-size: 14px;
+      font-size: 13px;
       line-height: 2;
       color: #444444;
-      max-width: 640px;
     }
 
     .section-body + .section-body {
       margin-top: 10px;
+    }
+
+    .spacer {
+      height: 80px;
     }
 
     /* ---------- lines ---------- */
@@ -142,81 +119,54 @@
       margin-top: 0;
     }
 
-    .lines-grid {
-      display: grid;
-      gap: 56px;
-      margin-top: 36px;
-    }
-
-    @media (min-width: 880px) {
-      .lines-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 48px;
-      }
-    }
-
-    .line-box {
-      font-size: 14px;
-      line-height: 2;
-    }
-
-    .line-name {
+    .line-label {
       font-size: 11px;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: #777777;
+      color: #999999;
       margin-bottom: 8px;
     }
 
     .line-title {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 600;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
     .line-text {
+      font-size: 13px;
+      line-height: 2;
       color: #444444;
-      margin-bottom: 18px;
+      margin-bottom: 10px;
     }
 
     .line-link {
-      font-size: 13px;
+      font-size: 12px;
+      margin-top: 4px;
     }
 
-    /* ---------- links / contact ---------- */
+    .line-block + .line-block {
+      margin-top: 40px;
+    }
+
+    /* ---------- contact ---------- */
 
     .link-list {
       list-style: none;
-      margin-top: 20px;
-      font-size: 14px;
+      margin-top: 18px;
+      font-size: 13px;
       line-height: 2;
     }
 
     .link-list li {
       display: flex;
-      gap: 16px;
+      gap: 14px;
     }
 
     .link-label {
-      width: 92px;
+      width: 80px;
       font-size: 12px;
       color: #888888;
-    }
-
-    .btn-link {
-      display: inline-block;
-      margin-top: 18px;
-      padding: 8px 18px;
-      border-radius: 999px;
-      border: 1px solid #111111;
-      font-size: 12px;
-      text-decoration: none;
-    }
-
-    .btn-link:hover {
-      text-decoration: none;
-      background: #111111;
-      color: #ffffff;
     }
 
     /* ---------- footer ---------- */
@@ -231,22 +181,17 @@
     /* ---------- responsive ---------- */
 
     @media (max-width: 640px) {
+      .page {
+        padding: 48px 18px 72px;
+      }
       header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
+        margin-bottom: 72px;
       }
-
-      .nav {
-        gap: 16px;
-      }
-
       .hero {
         margin-bottom: 72px;
       }
-
-      .divider {
-        margin: 56px 0;
+      .spacer {
+        height: 64px;
       }
     }
   </style>
@@ -255,129 +200,109 @@
   <div class="page">
     <div class="inner">
 
-      <!-- header ---------------------------------------------------------->
+      <!-- header : small logo + big silence ------------------------------>
       <header>
         <div class="logo-wrap">
-          <!-- 手書きBIASロゴ画像。bias-logo.png を同じフォルダにアップしておく -->
+          <!-- bias-logo.png を同じフォルダにアップ -->
           <img src="bias-logo.png" alt="Bias logo" />
           <div class="logo-sub">DISABILITY IS NORMALIZED</div>
         </div>
-        <nav class="nav">
-          <a href="#about">ABOUT</a>
-          <a href="#lines">LINES</a>
-          <a href="#contact">CONTACT</a>
-        </nav>
       </header>
 
       <!-- hero ----------------------------------------------------------->
       <section class="hero" id="top">
         <div class="hero-en">Disability is normalized.</div>
-        <div class="hero-ja">特別から、日常へ。</div>
+        <div class="hero-ja">障がいを、当たり前に。</div>
         <p class="hero-text">
-          Bias は、障害を「特別なもの」として切り離すのではなく、
-          日常の中にあるひとつの揺らぎとして捉え直すプロジェクトです。
-          思想（BIAS CORE）、アパレル（BIAS APPAREL）、体験（GLEAM）の
-          3つのラインを通して、社会の“見え方”を静かにずらしていきます。
+          Bias は、障害や福祉に結びつけられてきた「特別」「かわいそう」「大変そう」といった
+          イメージを更新するプロジェクトです。DISABILITY IS NORMALIZED をテーマに、
+          障がいを日常の一部として位置づけ直します。
         </p>
       </section>
 
-      <div class="divider"></div>
+      <div class="spacer"></div>
 
       <!-- about ---------------------------------------------------------->
       <section id="about">
-        <div class="section-label">About</div>
-        <h2 class="section-title">Bias Project</h2>
+        <h2 class="section-title">福祉のイメージを、更新する。</h2>
         <p class="section-body">
-          家族に障害がいること、福祉の現場で働くことを通して、
-          「障害そのもの」よりも「社会のまなざし」に違和感を覚えたことが
-          Bias の出発点になりました。
+          福祉は長く、専門的で特別な領域として扱われてきました。
+          Bias は、ことば・ビジュアル・体験を通じてその境界線をゆるめ、
+          誰にとっても開かれた日常の風景として捉え直すことを目指します。
         </p>
         <p class="section-body">
-          正しさだけでは偏見はほどけない。  
-          光、線、言葉、服、場づくりを通して、
-          いまある福祉のイメージを少しだけズラす。
-          そのための小さな実験を積み重ねていくプロジェクトです。
+          目的はシンプルです。障がいを特別視するのではなく、
+          社会のごく当たり前の前提として再配置すること。
+          そのための小さなデザインを積み重ねていきます。
         </p>
-        <a
-          class="btn-link"
-          href="https://www.instagram.com/us_bias/"
-          target="_blank"
-          rel="noopener"
-        >
-          Instagram @us_bias
-        </a>
       </section>
 
-      <div class="divider"></div>
+      <div class="spacer"></div>
 
       <!-- lines ---------------------------------------------------------->
       <section id="lines" class="lines-root">
-        <div class="section-label">Lines</div>
-        <h2 class="section-title">3つのライン</h2>
+        <h2 class="section-title">LINES</h2>
 
-        <div class="lines-grid">
-
-          <div class="line-box">
-            <div class="line-name">BIAS CORE</div>
-            <div class="line-title">思想・言葉</div>
-            <p class="line-text">
-              詩、エッセイ、ZINEなどを通して、
-              「障害」「ふつう」「日常」の見方を問い直すライン。
-              言葉とビジュアルで、考え方の土台を少しだけ揺らします。
-            </p>
-            <div class="line-link">
-              <a href="https://note.com/us_bias" target="_blank" rel="noopener">
-                → noteで読む
-              </a>
-            </div>
+        <!-- BIAS CORE -->
+        <div class="line-block">
+          <div class="line-label">BIAS CORE</div>
+          <div class="line-title">思想・言葉</div>
+          <p class="line-text">
+            障がい／日常／社会の見え方を再考するライン。
+            詩やエッセイ、ZINE などのテキストとビジュアルを通じて、
+            福祉のイメージの基礎を更新します。
+          </p>
+          <div class="line-link">
+            <a href="https://note.com/us_bias" target="_blank" rel="noopener">
+              → noteで読む
+            </a>
           </div>
+        </div>
 
-          <div class="line-box">
-            <div class="line-name">BIAS APPAREL</div>
-            <div class="line-title">アパレル</div>
-            <p class="line-text">
-              「特別ではなく日常にある障害」という視点を、
-              毎日着られる服に落とし込むライン。
-              ロゴ、文字、光のモチーフを使ったTシャツなどを展開します。
-            </p>
-            <div class="line-link">
-              <a href="https://suzuri.jp/Bias" target="_blank" rel="noopener">
-                → SUZURIで見る
-              </a>
-            </div>
+        <!-- BIAS APPAREL -->
+        <div class="line-block">
+          <div class="line-label">BIAS APPAREL</div>
+          <div class="line-title">アパレル</div>
+          <p class="line-text">
+            「障がいは日常にある」という前提を、服というメディアに落とし込むライン。
+            ロゴやタイポグラフィ、光のモチーフを用いたアイテムを展開します。
+          </p>
+          <div class="line-link">
+            <a href="https://suzuri.jp/Bias" target="_blank" rel="noopener">
+              → SUZURIで見る
+            </a>
           </div>
+        </div>
 
-          <div class="line-box">
-            <div class="line-name">GLEAM</div>
-            <div class="line-title">体験・イベント</div>
-            <p class="line-text">
-              光と音を使った体験イベント。
-              障害のある人／ない人、福祉とカルチャーが
-              ゆるやかにまざる夜をデザインします。
-            </p>
-            <div class="line-link">
-              <a
-                href="https://note.com/us_bias/n/n8640a4209ec5"
-                target="_blank"
-                rel="noopener"
-              >
-                → Gleamについて読む
-              </a>
-            </div>
+        <!-- GLEAM -->
+        <div class="line-block">
+          <div class="line-label">GLEAM</div>
+          <div class="line-title">体験・イベント</div>
+          <p class="line-text">
+            音と光を用いた体験ライン。
+            クラブイベント、ミュージックイベント、ワークショップなどを通じて、
+            障がいのある人／ない人が同じ場とリズムを共有する状況をつくります。
+          </p>
+          <div class="line-link">
+            <a
+              href="https://note.com/us_bias/n/n8640a4209ec5"
+              target="_blank"
+              rel="noopener"
+            >
+              → Gleamについて読む
+            </a>
           </div>
-
         </div>
       </section>
 
-      <div class="divider"></div>
+      <div class="spacer"></div>
 
       <!-- contact / links ----------------------------------------------->
       <section id="contact">
-        <div class="section-label">Contact / Links</div>
-        <h2 class="section-title">依頼・相談 / Online</h2>
+        <h2 class="section-title">CONTACT</h2>
         <p class="section-body">
-          ワークショップ、イベント、デザイン依頼、コラボレーションなどのご相談は、
-          下記のいずれかから気軽にご連絡ください。
+          ワークショップ、イベント、アートワーク、デザインの依頼・相談は、
+          下記のリンクから受け付けています。
         </p>
 
         <ul class="link-list">
