@@ -13,8 +13,8 @@
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Noto Sans JP",
         system-ui, sans-serif;
-      color: #f5f5f5;
-      background: #000;
+      color: #111;
+      background: #ffffff;
     }
     a {
       color: inherit;
@@ -37,15 +37,22 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 56px;
+      margin-bottom: 48px;
     }
-    .logo {
-      font-size: 13px;
+    .logo-img {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo-img img {
+      height: 42px;
+      width: auto;
+      display: block;
+    }
+    .logo-sub {
+      font-size: 11px;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-    }
-    .logo span {
-      font-weight: 600;
     }
     .nav {
       display: flex;
@@ -53,25 +60,12 @@
       font-size: 11px;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      opacity: 0.7;
-    }
-    .nav a {
-      text-decoration: none;
+      opacity: 0.75;
     }
 
     /* hero */
     .hero {
-      margin-bottom: 72px;
-    }
-    .hero-logo {
-      margin-bottom: 32px;
-      text-align: center;
-    }
-    .hero-logo img {
-      max-width: 420px;
-      width: 100%;
-      height: auto;
-      display: inline-block;
+      margin-bottom: 64px;
     }
     .hero-en {
       font-family: "Helvetica Neue", Arial, sans-serif;
@@ -81,25 +75,25 @@
     }
     .hero-ja {
       font-size: 15px;
-      color: #cccccc;
-      margin-bottom: 20px;
+      color: #555;
+      margin-bottom: 18px;
     }
     .hero-text {
       font-size: 13px;
       line-height: 1.9;
-      color: #d0d0d0;
+      color: #444;
       max-width: 520px;
     }
 
-    /* section */
+    /* sections */
     section {
-      margin-top: 56px;
+      margin-top: 48px;
     }
     .section-label {
       font-size: 11px;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: #888;
+      color: #999;
       margin-bottom: 8px;
     }
     .section-title {
@@ -110,17 +104,23 @@
     .section-body {
       font-size: 13px;
       line-height: 1.9;
-      color: #dedede;
+      color: #444;
     }
     .section-body + .section-body {
-      margin-top: 10px;
+      margin-top: 8px;
     }
 
-    /* lines list */
+    .divider {
+      height: 1px;
+      background: #e5e5e5;
+      margin: 36px 0;
+    }
+
+    /* lines */
     .lines {
       display: grid;
-      gap: 32px;
-      margin-top: 16px;
+      gap: 28px;
+      margin-top: 12px;
     }
     @media (min-width: 800px) {
       .lines {
@@ -129,14 +129,14 @@
     }
     .line-item {
       font-size: 13px;
-      line-height: 1.8;
+      line-height: 1.9;
     }
     .line-name {
-      font-size: 12px;
+      font-size: 11px;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      margin-bottom: 6px;
-      color: #aaaaaa;
+      color: #777;
+      margin-bottom: 4px;
     }
     .line-title-ja {
       font-weight: 600;
@@ -145,13 +145,7 @@
     .line-link {
       font-size: 11px;
       margin-top: 8px;
-      opacity: 0.8;
-    }
-
-    .divider {
-      height: 1px;
-      background: rgba(255, 255, 255, 0.12);
-      margin: 40px 0;
+      color: #333;
     }
 
     /* links */
@@ -164,30 +158,23 @@
     .link-list li span {
       display: inline-block;
       min-width: 90px;
-      color: #9e9e9e;
+      color: #888;
       font-size: 12px;
     }
 
-    /* button-ish link */
     .btn-link {
       display: inline-block;
-      margin-top: 16px;
-      padding: 8px 16px;
-      border: 1px solid rgba(255, 255, 255, 0.4);
+      margin-top: 14px;
+      padding: 7px 16px;
+      border: 1px solid #111;
       border-radius: 999px;
       font-size: 12px;
-      text-decoration: none;
-    }
-    .btn-link:hover {
-      background: #fff;
-      color: #000;
-      text-decoration: none;
     }
 
     footer {
-      margin-top: 64px;
+      margin-top: 56px;
       font-size: 11px;
-      color: #777;
+      color: #999;
       line-height: 1.8;
     }
   </style>
@@ -197,32 +184,27 @@
     <div class="inner">
 
       <header>
-        <div class="logo">
-          <span>BIAS</span> PROJECT
+        <div class="logo-img">
+          <img src="bias-logo.png" alt="Bias logo" />
+          <div class="logo-sub">DISABILITY IS NORMALIZED</div>
         </div>
         <nav class="nav">
           <a href="#about">ABOUT</a>
           <a href="#lines">LINES</a>
-          <a href="#workshop">WORKSHOP</a>
           <a href="#links">LINKS</a>
-          <a href="#pdf">PDF</a>
         </nav>
       </header>
 
       <main>
-        <!-- hero -->
-        <section class="hero" id="top">
-          <div class="hero-logo">
-            <!-- Gleamロゴ画像。gleam-logo.png をリポジトリにアップしておく -->
-            <img src="gleam-logo.png" alt="Gleam logo" />
-          </div>
+        <!-- HERO -->
+        <section class="hero">
           <div class="hero-en">Disability is normalized.</div>
           <div class="hero-ja">特別から、日常へ。</div>
           <p class="hero-text">
             Bias は、障害を「特別なもの」として切り離すのではなく、
-            日常の中にあるひとつの揺らぎとして捉え直すプロジェクトです。
-            思想（BIAS CORE）、循環（RE:BIAS）、体験（GLEAM）という
-            3つのラインを通して、社会の“見え方”を静かにずらしていきます。
+            日常にあるひとつの揺らぎとして捉え直すプロジェクト。
+            思想（CORE）、アパレル（APPAREL）、体験（GLEAM）という
+            3つのラインで “見え方” をアップデートしていきます。
           </p>
         </section>
 
@@ -231,17 +213,16 @@
         <!-- ABOUT -->
         <section id="about">
           <div class="section-label">About</div>
-          <h2 class="section-title">創造的福祉と「見え方」を変える試み</h2>
+          <h2 class="section-title">Bias Project</h2>
           <p class="section-body">
-            家族に障害がいること、福祉の現場で働くことを通して、
-            「障害そのもの」よりも「社会のまなざし」に違和感を覚えたことが
-            Bias の出発点になりました。
+            家族に障害がいることや福祉の現場で働く経験から、
+            「障害そのもの」よりも「社会のまなざし」に違和感を抱いたことが
+            Bias の始まりです。
           </p>
           <p class="section-body">
-            正しさだけでは偏見はほどけない。<br />
-            色や間、言葉になりきらない感覚を通して、
-            いまある福祉のイメージを少しずつズラしていく。
-            そのためのビジュアル・文章・場づくりを行っています。
+            正しさだけでは偏見はほどけない。  
+            光、線、文章、アパレル、空間を通して、  
+            福祉のイメージを静かにずらしていく実験的プロジェクトです。
           </p>
         </section>
 
@@ -254,11 +235,10 @@
             <!-- BIAS CORE -->
             <div class="line-item">
               <div class="line-name">Bias Core</div>
-              <div class="line-title-ja">思想・言葉・アート</div>
+              <div class="line-title-ja">思想・言葉</div>
               <p>
-                詩、テキスト、ZINE、光のイメージなどで
-                「障害」「ふつう」「日常」を問い直すライン。
-                noteでの連載やアートブックとして展開していきます。
+                詩、エッセイ、ZINEなどを通して、
+                「障害」「ふつう」「日常」の見方を問い直すライン。
               </p>
               <div class="line-link">
                 <a href="https://note.com/us_bias" target="_blank" rel="noopener">
@@ -267,18 +247,20 @@
               </div>
             </div>
 
-            <!-- RE:BIAS -->
+            <!-- BIAS APPAREL -->
             <div class="line-item">
-              <div class="line-name">Re:bias</div>
-              <div class="line-title-ja">循環・服の再生</div>
+              <div class="line-name">Bias Apparel</div>
+              <div class="line-title-ja">アパレル</div>
               <p>
-                役目を終えた服や布を集め、解体し、別のかたちに再構成するプロジェクト。
-                「もういらない」ものを、「もう一度 日常に戻る」ものへ。
+                「特別ではなく日常にある障害」という視点を服に落とし込むライン。
+                ロゴ、文字、光のモチーフを使ったTシャツ等を展開。
               </p>
               <div class="line-link">
-                <!-- 必要なら個別のnote記事URLに差し替え -->
-                <a href="https://note.com/us_bias" target="_blank" rel="noopener">
-                  → Re:BIASの記録を見る
+                <a
+                  href="https://suzuri.jp/?utm_source=google&utm_medium=cpc&utm_campaign=p-max"
+                  target="_blank" rel="noopener"
+                >
+                  → SUZURIで見る
                 </a>
               </div>
             </div>
@@ -286,39 +268,19 @@
             <!-- GLEAM -->
             <div class="line-item">
               <div class="line-name">Gleam</div>
-              <div class="line-title-ja">体験・ワークショップ・イベント</div>
+              <div class="line-title-ja">体験・イベント</div>
               <p>
-                光と音、空間を使った体験型イベント。
-                障害のある人／ない人、福祉とカルチャーがゆるやかに混ざり合う
-                夜をデザインします。学校・企業向けプログラムとしても実施可能です。
+                光と音を使った体験イベント。  
+                障害のある人／ない人、福祉とカルチャーがゆるやかにまざる夜をつくります。
               </p>
               <div class="line-link">
-                <!-- 必要ならGleam紹介noteに差し替え -->
-                <a href="https://note.com/us_bias" target="_blank" rel="noopener">
+                <a href="https://note.com/us_bias/n/n8640a4209ec5"
+                   target="_blank" rel="noopener">
                   → Gleamについて読む
                 </a>
               </div>
             </div>
           </div>
-        </section>
-
-        <div class="divider"></div>
-
-        <!-- WORKSHOP -->
-        <section id="workshop">
-          <div class="section-label">Workshop</div>
-          <h2 class="section-title">「いつでも依頼できる」ワークショップ</h2>
-          <p class="section-body">
-            Biasのワークショップは、決まった開催日を待つ形ではなく、
-            企業・学校・カフェ・福祉施設などからの<strong>随時依頼</strong>で行います。
-          </p>
-          <p class="section-body">
-            ・障害の見え方をテーマにした入門ワークショップ（一般向け）<br />
-            ・ADHDや社会モデルを扱うレクチャー＋対話（ビジネスパーソン向け）<br />
-            ・光と音を使った体験型セッション（イベント・ライブ向け）<br /><br />
-            内容・時間・予算に合わせて一緒に設計します。
-          </p>
-          <a class="btn-link" href="#links">ワークショップの相談をする</a>
         </section>
 
         <div class="divider"></div>
@@ -342,45 +304,25 @@
             </li>
             <li>
               <span>SUZURI</span>
-              <!-- ★ここをあなたのショップURLに変えてください -->
-              <a href="https://suzuri.jp/" target="_blank" rel="noopener">
-                Bias / グッズ販売（SUZURI）
+              <a
+                href="https://suzuri.jp/?utm_source=google&utm_medium=cpc&utm_campaign=p-max"
+                target="_blank" rel="noopener"
+              >
+                Bias Apparel（SUZURI）
               </a>
             </li>
             <li>
               <span>Mail</span>
-              <!-- ★ここをあなたのメールアドレスに変更 -->
-              <a href="mailto:your.mail@example.com">
-                your.mail@example.com
-              </a>
+              <a href="mailto:your.mail@example.com">your.mail@example.com</a>
             </li>
           </ul>
-        </section>
-
-        <div class="divider"></div>
-
-        <!-- PDF -->
-        <section id="pdf">
-          <div class="section-label">PDF</div>
-          <h2 class="section-title">Bias Project PDF</h2>
-          <p class="section-body">
-            プロジェクトの背景・ビジュアル・協力者一覧をまとめたPDFです。
-            企画書・ポートフォリオとして共有する際にご利用ください。
-          </p>
-          <a
-            class="btn-link"
-            href="BIAS_PROJECT_2.pdf"
-            target="_blank"
-            rel="noopener"
-          >
-            PDFを開く
-          </a>
         </section>
 
         <footer>
           Bias Project — Disability is normalized / 特別から日常へ。<br />
           © Bias
         </footer>
+
       </main>
     </div>
   </div>
