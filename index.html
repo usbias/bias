@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bias — Disability is normalized.</title>
   <style>
+    /* ---------- base ---------- */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -16,7 +17,80 @@
         system-ui, sans-serif;
       background: #ffffff;
       color: #111111;
+      letter-spacing: 0.01em;
     }
+
+    .page {
+      min-height: 100vh;
+      padding: 120px 32px 180px;
+    }
+
+    .inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    section {
+      margin-top: 40px;
+    }
+
+    /* ---------- spacing : 余白 ---------- */
+
+    .big-space {
+      height: 200px;
+    }
+
+    .big-space-2 {
+      height: 260px;
+    }
+
+    .big-space-3 {
+      height: 300px;
+    }
+
+    /* ---------- header / logo ---------- */
+
+    header {
+      text-align: center;
+      margin-bottom: 180px;
+    }
+
+    .logo-wrap img {
+      height: 30px;
+      width: auto;
+      opacity: 0.9;
+      margin-bottom: 14px;
+    }
+
+    .logo-sub {
+      font-size: 10px;
+      color: #777;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    /* ---------- hero ---------- */
+
+    .hero-en {
+      font-size: 34px;
+      line-height: 1.35;
+      margin-bottom: 20px;
+    }
+
+    .hero-ja {
+      font-size: 15px;
+      margin-bottom: 40px;
+      color: #555;
+    }
+
+    .hero-text {
+      font-size: 13px;
+      line-height: 2.2;
+      color: #444;
+      max-width: 580px;
+    }
+
+    /* ---------- instagram button ---------- */
 
     a {
       color: inherit;
@@ -27,154 +101,94 @@
       text-decoration: underline;
     }
 
-    .page {
-      min-height: 100vh;
-      padding: 64px 24px 96px;
-    }
-
-    .inner {
-      max-width: 720px;
-      margin: 0 auto;
-    }
-
-    /* ---------- header（ロゴのみ・余白多め） ---------- */
-
-    header {
-      margin-bottom: 96px;
-    }
-
-    .logo-wrap {
-      text-align: center;
-      padding: 32px 0 24px;
-    }
-
-    .logo-wrap img {
-      height: 32px;
-      width: auto;
-      display: block;
-      margin: 0 auto 10px;
-    }
-
-    .logo-sub {
-      font-size: 10px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: #777777;
-    }
-
-    /* ---------- hero ---------- */
-
-    .hero {
-      margin-bottom: 96px;
-    }
-
-    .hero-en {
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      font-size: 26px;
-      line-height: 1.4;
-      margin-bottom: 8px;
-    }
-
-    .hero-ja {
-      font-size: 14px;
-      color: #555555;
-      margin-bottom: 20px;
-    }
-
-    .hero-text {
+    .btn-instagram {
+      display: inline-block;
+      padding: 12px 32px;
+      border: 1px solid #111;
       font-size: 13px;
-      line-height: 2;
-      color: #444444;
+      letter-spacing: 0.05em;
+      text-decoration: none;
     }
 
-    /* ---------- sections ---------- */
-
-    section {
-      margin-top: 16px;
+    .btn-instagram:hover {
+      opacity: 0.6;
+      text-decoration: none;
     }
+
+    /* ---------- section titles ---------- */
 
     .section-title {
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 20px;
+      font-size: 20px;
+      margin-bottom: 16px;
     }
 
     .section-body {
       font-size: 13px;
-      line-height: 2;
-      color: #444444;
+      line-height: 2.2;
+      color: #444;
+      max-width: 600px;
     }
 
     .section-body + .section-body {
       margin-top: 10px;
     }
 
-    .spacer {
-      height: 80px;
-    }
-
     /* ---------- lines ---------- */
 
-    .lines-root {
-      margin-top: 0;
+    .line-block {
+      margin-bottom: 140px;
     }
 
     .line-label {
       font-size: 11px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: #999999;
+      letter-spacing: 0.2em;
       margin-bottom: 8px;
+      color: #999;
+      text-transform: uppercase;
     }
 
     .line-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 12px;
+      font-size: 18px;
+      margin-bottom: 14px;
     }
 
     .line-text {
       font-size: 13px;
-      line-height: 2;
-      color: #444444;
-      margin-bottom: 10px;
+      line-height: 2.2;
+      color: #444;
+      max-width: 580px;
     }
 
     .line-link {
+      margin-top: 8px;
       font-size: 12px;
-      margin-top: 4px;
-    }
-
-    .line-block + .line-block {
-      margin-top: 40px;
     }
 
     /* ---------- contact ---------- */
 
     .link-list {
       list-style: none;
-      margin-top: 18px;
+      margin-top: 22px;
+      line-height: 2.2;
       font-size: 13px;
-      line-height: 2;
     }
 
-    .link-list li {
+    .link-item {
       display: flex;
       gap: 14px;
     }
 
     .link-label {
-      width: 80px;
+      width: 90px;
+      color: #777;
       font-size: 12px;
-      color: #888888;
     }
 
-    /* ---------- footer ---------- */
-
     footer {
-      margin-top: 72px;
-      font-size: 11px;
-      color: #999999;
+      margin-top: 220px;
+      font-size: 10px;
+      color: #999;
+      text-align: left;
       line-height: 1.8;
     }
 
@@ -182,16 +196,18 @@
 
     @media (max-width: 640px) {
       .page {
-        padding: 48px 18px 72px;
+        padding: 80px 20px 140px;
       }
       header {
-        margin-bottom: 72px;
+        margin-bottom: 140px;
       }
-      .hero {
-        margin-bottom: 72px;
+      .big-space,
+      .big-space-2,
+      .big-space-3 {
+        height: 140px;
       }
-      .spacer {
-        height: 64px;
+      .hero-en {
+        font-size: 28px;
       }
     }
   </style>
@@ -200,10 +216,10 @@
   <div class="page">
     <div class="inner">
 
-      <!-- header : small logo + big silence ------------------------------>
+      <!-- header / logo -------------------------------------------------->
       <header>
         <div class="logo-wrap">
-          <!-- bias-logo.png を同じフォルダにアップ -->
+          <!-- bias-logo.png を同じフォルダに置く -->
           <img src="bias-logo.png" alt="Bias logo" />
           <div class="logo-sub">DISABILITY IS NORMALIZED</div>
         </div>
@@ -213,21 +229,37 @@
       <section class="hero" id="top">
         <div class="hero-en">Disability is normalized.</div>
         <div class="hero-ja">障がいを、当たり前に。</div>
+
+        <div class="big-space"></div>
+
         <p class="hero-text">
-          Bias は、障害や福祉に結びつけられてきた「特別」「かわいそう」「大変そう」といった
-          イメージを更新するプロジェクトです。DISABILITY IS NORMALIZED をテーマに、
-          障がいを日常の一部として位置づけ直します。
+          Bias は、障害や福祉に結びつけられてきた固定化されたイメージを更新する
+          プロジェクトです。特別ではなく、日常の一部として捉え直すための
+          デザインと言葉、体験を扱います。
         </p>
+
+        <div class="big-space"></div>
+
+        <div style="text-align:center;">
+          <a
+            href="https://www.instagram.com/us_bias/"
+            target="_blank"
+            rel="noopener"
+            class="btn-instagram"
+          >
+            Instagram
+          </a>
+        </div>
       </section>
 
-      <div class="spacer"></div>
+      <div class="big-space-2"></div>
 
       <!-- about ---------------------------------------------------------->
       <section id="about">
         <h2 class="section-title">福祉のイメージを、更新する。</h2>
         <p class="section-body">
           福祉は長く、専門的で特別な領域として扱われてきました。
-          Bias は、ことば・ビジュアル・体験を通じてその境界線をゆるめ、
+          Bias は、そのイメージを静かにずらし、
           誰にとっても開かれた日常の風景として捉え直すことを目指します。
         </p>
         <p class="section-body">
@@ -237,10 +269,10 @@
         </p>
       </section>
 
-      <div class="spacer"></div>
+      <div class="big-space-2"></div>
 
       <!-- lines ---------------------------------------------------------->
-      <section id="lines" class="lines-root">
+      <section id="lines">
         <h2 class="section-title">LINES</h2>
 
         <!-- BIAS CORE -->
@@ -280,8 +312,8 @@
           <div class="line-title">体験・イベント</div>
           <p class="line-text">
             音と光を用いた体験ライン。
-            クラブイベント、ミュージックイベント、ワークショップなどを通じて、
-            障がいのある人／ない人が同じ場とリズムを共有する状況をつくります。
+            ミュージックイベント、ワークショップなどを通じて、
+            障がいのある人／ない人の日常をつくります。
           </p>
           <div class="line-link">
             <a
@@ -295,36 +327,36 @@
         </div>
       </section>
 
-      <div class="spacer"></div>
+      <div class="big-space-2"></div>
 
-      <!-- contact / links ----------------------------------------------->
+      <!-- contact -------------------------------------------------------->
       <section id="contact">
         <h2 class="section-title">CONTACT</h2>
         <p class="section-body">
           ワークショップ、イベント、アートワーク、デザインの依頼・相談は、
-          下記のリンクから受け付けています。
+          下記より受け付けています。
         </p>
 
         <ul class="link-list">
-          <li>
+          <li class="link-item">
             <span class="link-label">Instagram</span>
             <a href="https://www.instagram.com/us_bias/" target="_blank" rel="noopener">
               @us_bias
             </a>
           </li>
-          <li>
+          <li class="link-item">
             <span class="link-label">note</span>
             <a href="https://note.com/us_bias" target="_blank" rel="noopener">
               note.com/us_bias
             </a>
           </li>
-          <li>
+          <li class="link-item">
             <span class="link-label">SUZURI</span>
             <a href="https://suzuri.jp/Bias" target="_blank" rel="noopener">
               suzuri.jp/Bias
             </a>
           </li>
-          <li>
+          <li class="link-item">
             <span class="link-label">Mail</span>
             <a href="mailto:bias2025ss@gmail.com">
               bias2025ss@gmail.com
